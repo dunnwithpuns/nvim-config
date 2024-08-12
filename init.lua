@@ -923,7 +923,16 @@ require("lazy").setup({
 		opts = {
 			load = {
 				["core.defaults"] = {},
-				["core.concealer"] = { icon_preset = "diamond" },
+				["core.concealer"] = {
+					config = { icon_preset = "diamond" },
+				},
+				["core.dirman"] = {
+					config = {
+						workspaces = {
+							notes = "~/workspace/github.com/dunnwithpuns/notes",
+						},
+					},
+				},
 			},
 		},
 	},
