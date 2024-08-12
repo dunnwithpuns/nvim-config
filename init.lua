@@ -929,7 +929,8 @@ require("lazy").setup({
 				["core.dirman"] = {
 					config = {
 						workspaces = {
-							notes = "~/workspace/github.com/dunnwithpuns/notes",
+							wsl = "~/workspace/github.com/dunnwithpuns/notes",
+							mac = "~/notes",
 						},
 					},
 				},
