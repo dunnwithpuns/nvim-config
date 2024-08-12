@@ -914,36 +914,32 @@ require("lazy").setup({
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	-- { import = "custom.plugins", ops = {} },
 
-	-- neorg plugin
-	{
-		"nvim-neorg/neorg",
-		lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-		version = "*", -- Pin Neorg to the latest stable release
-		config = true,
-		opts = {
-			load = {
-				["core.defaults"] = {},
-				["core.concealer"] = {
-					config = { icon_preset = "diamond" },
-				},
-				["core.dirman"] = {
-					config = {
-						workspaces = {
-							wsl = "~/workspace/github.com/dunnwithpuns/notes",
-							mac = "~/notes",
-						},
-					},
-				},
-			},
-		},
-	},
+	-- Treesitter
 
-	-- neorg modules
-	-- require("neorg").setup({
-	-- 	load = {
-	-- 		["core.defaults"] = {},
+	-- neorg plugin
+	-- {
+	-- 	"nvim-neorg/neorg",
+	-- 	lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+	-- 	version = "*", -- Pin Neorg to the latest stable release
+	-- 	config = true,
+	-- 	opts = {
+	-- 		load = {
+	-- 			["core.defaults"] = {},
+	-- 			["core.concealer"] = {
+	-- 				config = { icon_preset = "diamond" },
+	-- 			},
+	-- 			["core.dirman"] = {
+	-- 				config = {
+	-- 					workspaces = {
+	-- 						wsl = "~/workspace/github.com/dunnwithpuns/notes",
+	-- 						mac = "~/notes",
+	-- 					},
+	-- 				},
+	-- 			},
+	-- 		},
 	-- 	},
-	-- }),
+	-- },
+	--
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
