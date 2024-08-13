@@ -873,6 +873,7 @@ require("lazy").setup({
 				--  If you are experiencing weird indenting issues, add the language to
 				--  the list of additional_vim_regex_highlighting and disabled languages for indent.
 				additional_vim_regex_highlighting = { "ruby" },
+				{ "markdown" },
 			},
 			indent = { enable = true, disable = { "ruby" } },
 		},
@@ -913,7 +914,6 @@ require("lazy").setup({
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	-- { import = "custom.plugins", ops = {} },
-
 }, {
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
