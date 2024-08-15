@@ -9,6 +9,13 @@ vim.g.maplocalleader = " "
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Move to middle of brackets, quotes, parens, or curly bracks
+vim.keymap.set("i", "()", "()<C-[>i")
+vim.keymap.set("i", "[]", "[]<C-[>i")
+vim.keymap.set("i", "{}", "{}<C-[>i")
+vim.keymap.set("i", "''", "''<C-[>i")
+vim.keymap.set("i", '""', '""<C-[>i')
+
 -- Explorer Remap
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
