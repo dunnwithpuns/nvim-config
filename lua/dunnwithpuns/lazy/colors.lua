@@ -2,8 +2,7 @@ function ColorMyPencils(color)
 	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.opt.cursorline = false
 
 	vim.api.nvim_create_autocmd("TextYankPost", {
 		desc = "Highlight when yanking (copying) text",
@@ -27,7 +26,7 @@ return {
 				styles = {
 					italic = true,
 					bold = true,
-					transparancey = true,
+					transparency = true,
 				},
 
 				groups = {
@@ -63,17 +62,16 @@ return {
 
 				highlight_groups = {
 
-					TelescopeBackground = { bg = "none" },
-					TelescopeBorder = { fg = "highlight_high", bg = "none" },
-					TelescopeNormal = { bg = "none" },
-					TelescopePromptNormal = { bg = "none" },
-					TelescopeResultsNormal = { fg = "subtle", bg = "none" },
-					TelescopeSelection = { fg = "text", bg = "none" },
+					TelescopeBorder = { fg = "highlight_high" },
+					TelescopeResultsNormal = { fg = "subtle" },
+					TelescopeSelection = { fg = "text" },
 					TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
 					CurSearch = { fg = "base", bg = "rose", inherit = false },
 					Search = { bg = "rose", blend = 20, inherit = false },
+					netrw = { fg = "text" },
 				},
 			})
+			ColorMyPencils()
 		end,
 	},
 	{
