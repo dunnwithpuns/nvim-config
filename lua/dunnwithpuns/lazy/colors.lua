@@ -2,8 +2,6 @@ function ColorMyPencils(color)
 	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
 
-	vim.opt.cursorline = false
-
 	vim.api.nvim_create_autocmd("TextYankPost", {
 		desc = "Highlight when yanking (copying) text",
 		group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
@@ -71,21 +69,20 @@ return {
 					netrw = { fg = "text" },
 				},
 			})
-			ColorMyPencils()
 		end,
 	},
 	{
 		"erikbackman/brightburn.vim",
 	},
 
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	opts = {},
-	-- 	config = function()
-	-- 		ColorMyPencils()
-	-- 	end,
-	-- },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		opts = {},
+		config = function()
+			ColorMyPencils()
+		end,
+	},
 	-- {
 	-- 	"ellisonleao/gruvbox.nvim",
 	-- 	name = "gruvbox",
