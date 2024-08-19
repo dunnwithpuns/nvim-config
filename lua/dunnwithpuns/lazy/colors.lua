@@ -66,7 +66,6 @@ return {
 					TelescopeSelectionCaret = { fg = "rose", bg = "rose" },
 					CurSearch = { fg = "base", bg = "rose", inherit = false },
 					Search = { bg = "rose", blend = 20, inherit = false },
-					netrw = { fg = "text" },
 				},
 			})
 		end,
