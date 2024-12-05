@@ -1,14 +1,7 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine"
+	color = color or "rose-pine-moon"
 	vim.cmd.colorscheme(color)
 
-	vim.api.nvim_create_autocmd("TextYankPost", {
-		desc = "Highlight when yanking (copying) text",
-		group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-		callback = function()
-			vim.highlight.on_yank()
-		end,
-	})
 end
 
 return {
@@ -17,6 +10,7 @@ return {
 		name = "rose-pine",
 		config = function()
 			require("rose-pine").setup({
+				disable_backgroun = true,
 
 				enable = {
 					terminal = false,
@@ -71,10 +65,6 @@ return {
 		end,
 	},
 	{
-		"erikbackman/brightburn.vim",
-	},
-
-	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		opts = {},
@@ -82,34 +72,4 @@ return {
 			ColorMyPencils()
 		end,
 	},
-	-- {
-	-- 	"ellisonleao/gruvbox.nvim",
-	-- 	name = "gruvbox",
-	-- 	config = function()
-	-- 		require("gruvbox").setup({
-	-- 			terminal_colors = true, -- add neovim terminal colors
-	-- 			undercurl = true,
-	-- 			underline = false,
-	-- 			bold = true,
-	-- 			italic = {
-	-- 				strings = false,
-	-- 				emphasis = false,
-	-- 				comments = false,
-	-- 				operators = false,
-	-- 				folds = false,
-	-- 			},
-	-- 			strikethrough = true,
-	-- 			invert_selection = false,
-	-- 			invert_signs = false,
-	-- 			invert_tabline = false,
-	-- 			invert_intend_guides = false,
-	-- 			inverse = false, -- invert background for search, diffs, statuslines and erros,
-	-- 			contrast = "", -- can be "hard", "soft" or empty string
-	-- 			palette_overrides = {},
-	-- 			overrides = {},
-	-- 			dim_inactive = false,
-	-- 			transparent_mode = true,
-	-- 		})
-	-- 	end,
-	-- },
 }

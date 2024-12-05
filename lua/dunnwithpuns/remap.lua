@@ -10,10 +10,10 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Move to middle of brackets, quotes, parens
--- vim.keymap.set("i", "()", "()<Esc>i")
--- vim.keymap.set("i", "[]", "[]<Esc>i")
--- vim.keymap.set("i", "''", "''<Esc>i")
--- vim.keymap.set("i", '""', '""<Esc>i')
+ vim.keymap.set("i", "()", "()<Esc>i")
+ vim.keymap.set("i", "[]", "[]<Esc>i")
+ vim.keymap.set("i", "''", "''<Esc>i")
+ vim.keymap.set("i", '""', '""<Esc>i')
 
 -- Explorer Remap
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
