@@ -14,6 +14,7 @@ return {
 		"sql",
 		"dockerfile",
 		"lua",
+		"markdown",
 	  })
   end,
 	},
